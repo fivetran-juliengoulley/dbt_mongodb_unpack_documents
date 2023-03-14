@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: mongo # It would be best to keep this named salesforce
-    database: {{ var('mongo_database', target.database) }}
+    database: "{{ var('mongo_database', target.database) }}"
     schema: "{{ var('mongo_schema', 'mongo') }}" # Configure the salesforce_schema var from your dbt_project.yml (alternatively you can hard-code the schema here if only using one Salesforce connector)
     # Add the database where your Salesforce data resides if different from the target database. Eg. 'my_salesforce_database'. By default the target.database is used.
     tables:

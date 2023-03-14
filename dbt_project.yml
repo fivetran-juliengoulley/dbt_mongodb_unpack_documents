@@ -1,9 +1,9 @@
-name: 'dbt_sqlserver_demo'
+name: 'dbt_mongodb_unpack_documents'
 
 config-version: 2
 version: '0.1'
 
-profile: 'dbt_sqlserver_demo'
+profile: 'dbt_mongodb_unpack_documents'
 
 model-paths: ["models"]
 seed-paths: ["seeds"]
