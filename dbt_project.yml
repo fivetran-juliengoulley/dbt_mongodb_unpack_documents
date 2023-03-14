@@ -1,0 +1,29 @@
+name: 'dbt_sqlserver_demo'
+
+config-version: 2
+version: '0.1'
+
+profile: 'dbt_sqlserver_demo'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_modules"
+    - "logs"
+
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+
+models:
+  dbt_sqlserver_demo:
+      materialized: table
+      staging:
+        materialized: view
+
+vars:
+  mongo_schema: mongo_ss_default_sample_restaurants
