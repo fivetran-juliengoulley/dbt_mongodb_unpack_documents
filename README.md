@@ -72,8 +72,6 @@ If you would like your model to flatten the entire document at once related to y
 }}
 ```
 
-> This option makes use of the `fivetran_formula_model` lookup table, which stores connector-generated SQL queries for each source table. Compared to `fivetran_formula`, which is used in Options 2 & 3, it is typically more complete and supports most double-nested formulas.
-
 ### Option 2: Flatten all fields but arrays
 
 If you would like your model to flatten the document but store arrays in singular fields then you will need to:
@@ -88,8 +86,6 @@ If you would like your model to flatten the document but store arrays in singula
   )
 }}
 ```
-
-> This option makes use of the `fivetran_formula` lookup table, which requires the package to combine fields' formulas into a SQL query for each source table. This option does not support double-nested formulas and therefore may be incomplete compared to Option #1.
 
 ### Option 3: Flatten arrays only
 
